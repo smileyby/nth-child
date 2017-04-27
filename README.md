@@ -94,9 +94,132 @@ li:nth-child(n+2):nth-child(odd):nth-child(-n+9) span {
 
 ## :nth-of-type 的用法
 
-明天再写吧，今天有点晚了。明天要在家一个示例页面才行。光说没啥说服力。
+### :nth-of-type
 
-http://www.webhek.com/post/mastering-nth-child.html
+:nth-of-type指定要求相同的子元素类型
+
+```css
+
+/* 用蓝色圆斑表示 */
+span:nth-of-type(3) {
+    background-color: #298EB2;
+    box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+}
+
+/* 用桔色方块表示 */
+div:nth-of-type(4) {
+    background-color: #E17149:
+    box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black; 
+}
+
+
+```
+
+使用**:nth-of-type**,我们可以指定相同的子元素类型，然后再选择。
+
+### :nth-of-type 范围使用
+
+正方向相同子元素类型范围
+
+**span:nth-of-type(n+3)**
+
+**div:nth-of-type(2n+2)**
+
+```css
+
+/* 用蓝色圆斑表示 */
+span:nth-of-type(n+3) {
+    background-color: #298EB2;
+    box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+}
+
+/* 用橘色方块表示 */
+div:nth-of-type(2n+2) {
+    background-color: #E17149:
+    box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black; 
+}
+
+
+```
+
+使用**span:nth-of-type(n+3)**或**div:nth-of-type(2n+2)**,首先指定是相同的子元素类型，然后再这些类型中选择
+
+### 负方向相同子元素类型范围
+
+**span:nth-of-type(-n+4)**
+
+**div:nth-of-type(-n+5)**
+
+```css
+
+/* 用蓝色圆斑表示 */
+span:nth-of-type(-n+4) {
+    background-color: #298EB2;
+    box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+}
+
+/* 用橘色方块表示 */
+div:nth-of-type(-n+5) {
+    background-color: #E17149:
+    box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black; 
+}
+
+
+```
+
+使用span:nth-of-type(-n+4)或div:nth-of-type(-n+5)，首先指定相同子元素类型，然后再这些类型中选择
+
+### 前后范围限制相同子元素类型
+
+**span:nth-of-type(n+3):nth-of-type(-n+6)**
+
+**div:nth-of-type(n+1):nth-of-type(-n+3)**
+
+```css
+
+/* 用蓝色圆斑表示 */
+span:nth-of-type(n+3):nth-of-type(-n+6) {
+    background-color: #298EB2;
+    box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+}
+
+/* 用橘色方块表示 */
+div:nth-of-type(n+1):n-th-of-type(-n+3) {
+    background-color: #E17149:
+    box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+}
+
+
+```
+
+使用**:nth-of-type(n+3):nth-of-type(-n+6)**和div:nth-of-type(n+1):nth-of-type(-n+3)，首先指定是相同元素的子元素类型，然后再这些类型里选择，这个例子中选中的将会是3-6和1-3个子元素。
+
+### 高级相同子类型加前后范围限制用法
+
+**span:nth-of-type(n+3):nth-of-type(odd):nth-of-type(-n+6)**
+
+**div:nth-of-type(n+1):nth-of-type(even):nth-of-type(-n+3)**
+
+```css
+
+
+/* 用蓝色圆斑表示 */
+span:nth-of-type(n+3):nth-of-type(odd):nth-of-type(-n+7) {
+    background-color: #298EB2;
+    box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black;
+}
+
+/* 用橘色方块表示 */
+div:nth-of-type(n+1):nth-ofo-type(even):nth-of-type(-n+3)  {
+    background-color: #E17149:
+    box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), 0 0 10px black; 
+}
+
+
+```
+
+使用**span:nth-of-type(n+3):nth-of-type(odd):nth-of-type(-n+6)**和**div:nth-of-type(n+1):nth-of-type(even):nth-of-type(-n+3)**，你能够限制在相同类型子元素里选择，同时指定选择的其实位置和结束位置。这里同时使用了奇偶位限制。所有，最后剩下的是方3 ，5 和 圆 2。
+
 
 
 
