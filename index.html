@@ -5,6 +5,158 @@
   <title>:nth-child&:nth-of-type</title>
 </head>
 <body>
+<style type="text/css">
+h1 {
+  text-align: center;
+}
+section ul, section div {
+    width: 665px;
+    height: 45px;
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    border: 4px solid #202020;
+    border-radius: 13px;
+    padding: 0;
+}
+section ul li {
+    display: inline-block;
+    width: 36px;
+    padding: 0 10px;
+    margin: 0;
+}
+ul li span, ul li div {
+    width: 26px;
+    height: 26px;
+    display: block;
+    background-color: #ff6700;
+    margin: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    line-height: 26px;
+}
+
+.type1 li:nth-child(8) span {
+    background-color: #298EB2;
+}
+
+.type2 li:nth-child(n+6) span {
+    background-color: #298EB2;
+}
+
+.type3 li:nth-child(-n+9) span {
+    background-color: #298EB2;
+}
+
+.type4 li:nth-child(n+4):nth-child(-n+8) span {
+    background-color: #298EB2;
+}
+
+.type5 li:nth-child(n+2):nth-child(odd):nth-child(-n+9) span {
+    background-color: #298EB2;
+}
+
+.type6 li:nth-child(3n+1):nth-child(even) span {
+    background-color: #298EB2;
+}
+
+.type7 li:nth-of-type(3) span {
+    background-color: #298EB2;
+}
+
+.type8 li:span:nth-of-type(n+3) span {
+    background-color: #298EB2;
+}
+</style>
+<section>
+  <h1>:nth-child(8)</h1>
+  <ul class="type1">
+      <li><span>1</span></li>
+      <li><span>2</span></li>
+      <li><span>3</span></li>
+      <li><span>4</span></li>
+      <li><span>5</span></li>
+      <li><span>6</span></li>
+      <li><span>7</span></li>
+      <li><span>8</span></li>
+      <li><span>9</span></li>
+      <li><span>10</span></li>
+      <li><span>11</span></li>
+  </ul>
+  <h1>:nth-child(n+6)</h1>
+  <ul class="type2">
+      <li><span>1</span></li>
+      <li><span>2</span></li>
+      <li><span>3</span></li>
+      <li><span>4</span></li>
+      <li><span>5</span></li>
+      <li><span>6</span></li>
+      <li><span>7</span></li>
+      <li><span>8</span></li>
+      <li><span>9</span></li>
+      <li><span>10</span></li>
+      <li><span>11</span></li>
+  </ul>
+  <h1>:nth-child(-n+9)</h1>
+  <ul class="type3">
+      <li><span>1</span></li>
+      <li><span>2</span></li>
+      <li><span>3</span></li>
+      <li><span>4</span></li>
+      <li><span>5</span></li>
+      <li><span>6</span></li>
+      <li><span>7</span></li>
+      <li><span>8</span></li>
+      <li><span>9</span></li>
+      <li><span>10</span></li>
+      <li><span>11</span></li>
+  </ul>
+  <h1>:nth-child(n+4):nth-child(-n+8)</h1>
+  <ul class="type4">
+      <li><span>1</span></li>
+      <li><span>2</span></li>
+      <li><span>3</span></li>
+      <li><span>4</span></li>
+      <li><span>5</span></li>
+      <li><span>6</span></li>
+      <li><span>7</span></li>
+      <li><span>8</span></li>
+      <li><span>9</span></li>
+      <li><span>10</span></li>
+      <li><span>11</span></li>
+  </ul>
+  <h1>:nth-child(n+2):nth-child(odd):nth-child(-n+9)</h1>
+  <ul class="type5">
+      <li><span>1</span></li>
+      <li><span>2</span></li>
+      <li><span>3</span></li>
+      <li><span>4</span></li>
+      <li><span>5</span></li>
+      <li><span>6</span></li>
+      <li><span>7</span></li>
+      <li><span>8</span></li>
+      <li><span>9</span></li>
+      <li><span>10</span></li>
+      <li><span>11</span></li>
+  </ul>
+  <h1>:nth-child(3n+1):nth-child(even)</h1>
+  <ul class="type6">
+      <li><span>1</span></li>
+      <li><span>2</span></li>
+      <li><span>3</span></li>
+      <li><span>4</span></li>
+      <li><span>5</span></li>
+      <li><span>6</span></li>
+      <li><span>7</span></li>
+      <li><span>8</span></li>
+      <li><span>9</span></li>
+      <li><span>10</span></li>
+      <li><span>11</span></li>
+  </ul>
+
+  <h1>还差nth-of-type</h1>
+</section>
 
 </body>
 </html>
