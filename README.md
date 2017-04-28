@@ -220,6 +220,8 @@ div:nth-of-type(n+1):nth-ofo-type(even):nth-of-type(-n+3)  {
 
 使用**span:nth-of-type(n+3):nth-of-type(odd):nth-of-type(-n+6)**和**div:nth-of-type(n+1):nth-of-type(even):nth-of-type(-n+3)**，你能够限制在相同类型子元素里选择，同时指定选择的其实位置和结束位置。这里同时使用了奇偶位限制。所有，最后剩下的是方3 ，5 和 圆 2。
 
+注：**其中选择器的顺序是可以调换的，他们是一个“与”的关系**
+
 
 
 
