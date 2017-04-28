@@ -65,7 +65,7 @@ li:nth-child(n+4):nth-child(-n+8) span {
 
 ## 范围高级用法
 
-**nth-child(n+2):nth-child(odd):nth-child(-n+9)**奇数位/偶数位子元素
+**nth-child(n+2):nth-child(odd):nth-child(-n+9)**奇数位子元素
 
 ```css
 
@@ -90,7 +90,7 @@ li:nth-child(n+2):nth-child(odd):nth-child(-n+9) span {
 
 ```
 
-使用**nth-child(3n+1)**我们可以每个三个选中一个，也就是第1,4,7和10个子元素，但通过使用**nth-child(even)**我们可以过滤掉基数为子元素，也就是1和7，于是就剩下子元素只有4和10.
+使用**nth-child(3n+1)**我们可以每个三个选中一个，也就是第1,4,7和10个子元素，但通过使用**nth-child(even)**我们可以过滤掉奇数位子元素，也就是1和7，于是就剩下子元素只有4和10.
 
 ## :nth-of-type 的用法
 
